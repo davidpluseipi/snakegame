@@ -26,7 +26,8 @@ const int width = 80;
 const int height = 40;
 enum eDirection{STOP = 0, LEFT, RIGHT, UP, DOWN};
 enum eDirection dir;
-int fruitx, fruity, score, x, x_old, y, y_old = 0;
+int fruitx, fruity, score, x, x_head_old, y, y_head_old = 0;
+int x_old[101], y_old[101], x_temp[102], y_temp[102];
 int minx, miny = 2;
 int maxx = width - 1;
 int maxy = height - 1;
@@ -153,8 +154,20 @@ void input(){
 ///////////////////////////////////////////////////////////////////////////////
 // LOGIC
 void logic(){
-  x_old = x;
-  y_old = y;
+  // head
+  x_head_old = x;
+  y_head_old = y;
+  // tail
+  x_temp[0] = x;
+  y_temp[0] = y;
+  for (int i = 0; i < score; i++){
+    x_temp[i+1] = x_old[i];
+    y_temp[i+1] = y_old[i];
+  }
+  for (int i = 0; i < 100; i++){
+    x_old[i] = x_temp[i];
+    y_old[i] = y_temp[i];
+  }
   switch (dir) {
     case LEFT:
       x--;
@@ -176,29 +189,44 @@ void logic(){
 // Update
 void update() {
   // x is the column, y is the row. The origin (0,0) is top-left.
-  // Remove the old snake
-  setCursorPosition(x_old, y_old);
+  // Remove the old head
+  setCursorPosition(x_head_old, y_head_old);
   printf(" ");
+  // Remove the old tail
+  if (score > 0){
+    for (int i = 0; i < score + 1; i++){
+      setCursorPosition(x_old[i], y_old[i]);
+      printf(" ");
+    }
+  }
   // Check to see if the snake is still on the map
   if ((x < 1 | (x > width - 1) ) | (y < 1 | (y > height - 1) )) {
     gameover = true;
   } else {
-    // Place the snake's head
-    setCursorPosition(x, y);
-    printf("S");
     // Place the snake's tail
-    // TODO: write tail code
-
+    if (score > 0){
+      for (int i = 0; i < score; i++){
+        setCursorPosition(x_old[i], y_old[i]);
+        printf("o");
+      }
+    }
     // If snake's head is at fruit location, increase score and move fruit
     if (x == fruitx & y == fruity) {
       fruitx = rand() % (maxx - minx + 1) + minx;
       fruity = rand() % (maxy - miny + 1) + miny;
-      setCursorPosition(fruitx, fruity);
-      printf("F");
       score++;
-      setCursorPosition(0, (height + 1) + 3);
-      printf("Score: %d\n", score);
+      if (score == 100){
+        gameover = true;
+      }
+      setCursorPosition(7, (height + 1) + 3);
+      printf("%d\n", score);
     }// end of if
+    // Print the fruit (over the tail if necessary)
+    setCursorPosition(fruitx, fruity);
+    printf("F");
+    // Place the snake's head (over the tail if necessary)
+    setCursorPosition(x, y);
+    printf("O");
   }// end of else
 
 } // end of update
