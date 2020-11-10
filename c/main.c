@@ -19,6 +19,8 @@ void cls(void);
 void update(void);
 void setCursorPosition(int, int);
 void show_cursor(bool);
+void show_gameover(void);
+void show_winner(void);
 ///////////////////////////////////////////////////////////////////////////////
 // global variable declarations
 bool gameover;
@@ -36,37 +38,28 @@ CONSOLE_CURSOR_INFO cursor;
 // MAIN
 int main(){
   show_cursor(false); // stop showing the cursor
-  // Display splash screen
-  cls();
+  cls(); // Display splash screen
   setCursorPosition(round(width/2), round(height/2));
   printf("Snake Game");
   Sleep(2000);
 
   // Get the board ready
-  cls();
   setup();
-  draw();
-
-  while (!gameover) {
+  while(!gameover) {
     input();
     logic();
     update();
-    Sleep(100); // on windows sleep(1000) to sleep 1 sec
-    // on unix enter sleep(1) to sleep 1 second
+    Sleep(100); // on windows sleep(1000) to sleep 1 sec. On unix enter sleep(1) to sleep 1 second
   }
-
-  // Display game over
-  cls();
-  setCursorPosition(round(width/2), round(height/2));
-  printf("Game Over");
-  Sleep(2000);
-  cls();
+  if (score < 100) {show_gameover();} else {show_winner();}
   show_cursor(true);
+  fflush(stdin); // clear the input buffer (extra keyboard input would otherwise show after the return)
   return 0;
 }// end of main
 ///////////////////////////////////////////////////////////////////////////////
 // SETUP
 void setup(){
+  cls();
   // allows us to enter the while loop and play the game
   gameover = false;
   dir = STOP;
@@ -80,6 +73,7 @@ void setup(){
   fruitx = rand() % (maxx - minx + 1) + minx;
   fruity = rand() % (maxy - miny + 1) + miny;
 
+  draw();
 } // end setup
 ///////////////////////////////////////////////////////////////////////////////
 // DRAW
@@ -136,16 +130,31 @@ void input(){
       case 'a':
         dir = LEFT;
         break;
+      case 'A': // in case the caps lock is on
+        dir = LEFT;
+        break;
       case 'd':
+        dir = RIGHT;
+        break;
+      case 'D':
         dir = RIGHT;
         break;
       case 'w':
         dir  = UP;
         break;
+      case 'W':
+        dir  = UP;
+        break;
       case 's':
         dir = DOWN;
         break;
+      case 'S':
+        dir = DOWN;
+        break;
       case 'x':
+        gameover = true;
+        break;
+      case 'X':
         gameover = true;
         break;
     } // end switch
@@ -186,7 +195,7 @@ void logic(){
   }
 }// end logic
 ///////////////////////////////////////////////////////////////////////////////
-// Update
+// UPDATE
 void update() {
   // x is the column, y is the row. The origin (0,0) is top-left.
   // Remove the old head
@@ -203,11 +212,15 @@ void update() {
   if ((x < 1 | (x > width - 1) ) | (y < 1 | (y > height - 1) )) {
     gameover = true;
   } else {
-    // Place the snake's tail
+    // Place the snake's tail and check if the snake touches its tail
     if (score > 0){
       for (int i = 0; i < score; i++){
         setCursorPosition(x_old[i], y_old[i]);
         printf("o");
+        if (x == x_old[i] & y == y_old[i]){
+          gameover = true;
+          break;
+        }
       }
     }
     // If snake's head is at fruit location, increase score and move fruit
@@ -231,13 +244,14 @@ void update() {
 
 } // end of update
 ///////////////////////////////////////////////////////////////////////////////
+// setCursorPosition
 void setCursorPosition(int x, int y){
   HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);
   COORD coord = { (SHORT)x, (SHORT)y };
   SetConsoleCursorPosition(hOut, coord);
 } // end of setCursorPosition
 ///////////////////////////////////////////////////////////////////////////////
-// Clear Screen
+// CLEAR SCREEN
 void cls() {
   // Get the Win32 handle representing standard output.
   // This generally only has to be done once, so we make it static.
@@ -263,7 +277,7 @@ void cls() {
   SetConsoleCursorPosition(hOut, topLeft);
 } // end of cls
 ///////////////////////////////////////////////////////////////////////////////
-// Hide cursor
+// SHOW CURSOR
 void show_cursor(bool input){
   HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE); // should be handle to console screen buffer
   if (!GetConsoleCursorInfo(handle, &cursor)){ // pCursor is structure
@@ -279,4 +293,23 @@ void show_cursor(bool input){
   }
 }
 ///////////////////////////////////////////////////////////////////////////////
+// SHOW GAMEOVER
+void show_gameover(){
+  cls();
+  setCursorPosition(round(width/2), round(height/2));
+  printf("Game Over");
+  Sleep(2000);
+  cls();
+} // end show_gameover
+///////////////////////////////////////////////////////////////////////////////
+// SHOW WINNER
+void show_winner(){
+  cls();
+  setCursorPosition(round(width/2), round(height/2));
+  printf("> 100 Points Makes You A Winner!");
+  setCursorPosition(0, height);
+  printf("(Press any key to exit)");
+  _getch(); // windows version of getch()
+  cls();
+}
 // end of file
