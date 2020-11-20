@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4703ec68-4ab9-405c-ad90-d99f0bb2f801" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1kX27WkRNMFmaE1X8Hx5AVlLpbE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../python" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager">
+    <configuration name="snakegame" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="py" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/snakegame.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.snakegame" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4703ec68-4ab9-405c-ad90-d99f0bb2f801" name="Default Changelist" comment="" />
+      <created>1605832449775</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605832449775</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-79" y="-1729" key="FileChooserDialogImpl" timestamp="1605908317687">
+      <screen x="-786" y="-2160" width="2560" height="1409" />
+    </state>
+    <state x="-79" y="-1729" key="FileChooserDialogImpl/0.0.1504.972/-786.-2160.2560.1409@-786.-2160.2560.1409" timestamp="1605908317687" />
+    <state x="707" y="431" key="FileChooserDialogImpl/0.0.2560.1409@0.0.2560.1409" timestamp="1605833758015" />
+    <state width="1480" height="323" key="GridCell.Tab.0.bottom" timestamp="1605910678927">
+      <screen x="0" y="0" width="2560" height="1409" />
+    </state>
+    <state width="1480" height="323" key="GridCell.Tab.0.bottom/0.0.2560.1409@0.0.2560.1409" timestamp="1605910678927" />
+    <state width="1480" height="323" key="GridCell.Tab.0.center" timestamp="1605910678926">
+      <screen x="0" y="0" width="2560" height="1409" />
+    </state>
+    <state width="1480" height="323" key="GridCell.Tab.0.center/0.0.2560.1409@0.0.2560.1409" timestamp="1605910678926" />
+    <state width="1480" height="323" key="GridCell.Tab.0.left" timestamp="1605910678926">
+      <screen x="0" y="0" width="2560" height="1409" />
+    </state>
+    <state width="1480" height="323" key="GridCell.Tab.0.left/0.0.2560.1409@0.0.2560.1409" timestamp="1605910678926" />
+    <state width="1480" height="323" key="GridCell.Tab.0.right" timestamp="1605910678927">
+      <screen x="0" y="0" width="2560" height="1409" />
+    </state>
+    <state width="1480" height="323" key="GridCell.Tab.0.right/0.0.2560.1409@0.0.2560.1409" timestamp="1605910678927" />
+    <state x="429" y="323" key="SettingsEditor" timestamp="1605909925327">
+      <screen x="0" y="0" width="2560" height="1409" />
+    </state>
+    <state x="429" y="323" key="SettingsEditor/0.0.2560.1409@0.0.2560.1409" timestamp="1605909925327" />
+    <state x="922" y="388" width="672" height="678" key="search.everywhere.popup" timestamp="1605910316565">
+      <screen x="0" y="0" width="2560" height="1409" />
+    </state>
+    <state x="922" y="388" width="672" height="678" key="search.everywhere.popup/0.0.2560.1409@0.0.2560.1409" timestamp="1605910316565" />
+  </component>
+</project>

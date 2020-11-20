@@ -24,15 +24,18 @@ void show_winner(void);
 ///////////////////////////////////////////////////////////////////////////////
 // global variable declarations
 bool gameover;
-const int width = 80;
-const int height = 40;
+int width = 160;
+int maxx = 159;
+const int height =60;
+int maxy = 59;
 enum eDirection{STOP = 0, LEFT, RIGHT, UP, DOWN};
 enum eDirection dir;
 int fruitx, fruity, score, x, x_head_old, y, y_head_old = 0;
-int x_old[101], y_old[101], x_temp[102], y_temp[102];
+int x_old[101];
+int y_old[101];
+int x_temp[101];
+int y_temp[101];
 int minx, miny = 2;
-int maxx = width - 1;
-int maxy = height - 1;
 CONSOLE_CURSOR_INFO cursor;
 ///////////////////////////////////////////////////////////////////////////////
 // MAIN
@@ -74,6 +77,7 @@ void setup(){
   fruity = rand() % (maxy - miny + 1) + miny;
 
   draw();
+  
 } // end setup
 ///////////////////////////////////////////////////////////////////////////////
 // DRAW
@@ -127,34 +131,19 @@ void draw(){
 void input(){
   if (_kbhit()){
     switch (_getch()) {
+      case 'w':     
+        dir = UP;
+        break;
+      case 's':     
+        dir = DOWN;
+        break;
+      case 'd':
+        dir  = RIGHT;
+        break;
       case 'a':
         dir = LEFT;
         break;
-      case 'A': // in case the caps lock is on
-        dir = LEFT;
-        break;
-      case 'd':
-        dir = RIGHT;
-        break;
-      case 'D':
-        dir = RIGHT;
-        break;
-      case 'w':
-        dir  = UP;
-        break;
-      case 'W':
-        dir  = UP;
-        break;
-      case 's':
-        dir = DOWN;
-        break;
-      case 'S':
-        dir = DOWN;
-        break;
       case 'x':
-        gameover = true;
-        break;
-      case 'X':
         gameover = true;
         break;
     } // end switch
@@ -218,8 +207,8 @@ void update() {
         setCursorPosition(x_old[i], y_old[i]);
         printf("o");
         if (x == x_old[i] & y == y_old[i]){
-          gameover = true;
-          break;
+          //gameover = true;
+          //break;
         }
       }
     }
