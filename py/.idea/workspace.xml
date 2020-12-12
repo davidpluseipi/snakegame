@@ -20,14 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4703ec68-4ab9-405c-ad90-d99f0bb2f801" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../c/main.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../c/main.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/py.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/py.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/white_square.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new_snakegame.py" beforeDir="false" afterPath="$PROJECT_DIR$/new_snakegame.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snakegame.py" beforeDir="false" afterPath="$PROJECT_DIR$/snakegame.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +47,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.new_snakegame">
+  <component name="RunManager" selected="Python.test">
     <configuration name="new_snakegame" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="py" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -117,8 +113,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.new_snakegame" />
         <item itemvalue="Python.test" />
+        <item itemvalue="Python.new_snakegame" />
         <item itemvalue="Python.snakegame" />
       </list>
     </recent_temporary>
@@ -139,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607734658914</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="adding new_snakegame.py (non-functional), and test.py (functional)">
+      <created>1607746758254</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1607746758254</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -157,7 +160,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="adding new_snakegame.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding new_snakegame.py" />
+    <MESSAGE value="adding new_snakegame.py (non-functional), and test.py (functional)" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding new_snakegame.py (non-functional), and test.py (functional)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-79" y="-1729" key="FileChooserDialogImpl" timestamp="1605908317687">
@@ -165,28 +169,28 @@
     </state>
     <state x="-79" y="-1729" key="FileChooserDialogImpl/0.0.1504.972/-786.-2160.2560.1409@-786.-2160.2560.1409" timestamp="1605908317687" />
     <state x="707" y="431" key="FileChooserDialogImpl/0.0.2560.1409@0.0.2560.1409" timestamp="1605833758015" />
-    <state width="1586" height="279" key="GridCell.Tab.0.bottom" timestamp="1607746294815">
+    <state width="1586" height="279" key="GridCell.Tab.0.bottom" timestamp="1607747305011">
       <screen x="0" y="0" width="2560" height="1409" />
     </state>
-    <state width="1586" height="279" key="GridCell.Tab.0.bottom/-2256.635.1504.972/0.0.2560.1409@0.0.2560.1409" timestamp="1607746294815" />
+    <state width="1586" height="279" key="GridCell.Tab.0.bottom/-2256.635.1504.972/0.0.2560.1409@0.0.2560.1409" timestamp="1607747305011" />
     <state width="1480" height="323" key="GridCell.Tab.0.bottom/0.0.2560.1409@0.0.2560.1409" timestamp="1605998433517" />
     <state width="1326" height="226" key="GridCell.Tab.0.bottom/786.2160.1504.972/0.0.2560.1409@0.0.2560.1409" timestamp="1606944907433" />
-    <state width="1586" height="279" key="GridCell.Tab.0.center" timestamp="1607746294815">
+    <state width="1586" height="279" key="GridCell.Tab.0.center" timestamp="1607747305011">
       <screen x="0" y="0" width="2560" height="1409" />
     </state>
-    <state width="1586" height="279" key="GridCell.Tab.0.center/-2256.635.1504.972/0.0.2560.1409@0.0.2560.1409" timestamp="1607746294815" />
+    <state width="1586" height="279" key="GridCell.Tab.0.center/-2256.635.1504.972/0.0.2560.1409@0.0.2560.1409" timestamp="1607747305011" />
     <state width="1480" height="323" key="GridCell.Tab.0.center/0.0.2560.1409@0.0.2560.1409" timestamp="1605998433517" />
     <state width="1326" height="226" key="GridCell.Tab.0.center/786.2160.1504.972/0.0.2560.1409@0.0.2560.1409" timestamp="1606944907433" />
-    <state width="1586" height="279" key="GridCell.Tab.0.left" timestamp="1607746294815">
+    <state width="1586" height="279" key="GridCell.Tab.0.left" timestamp="1607747305011">
       <screen x="0" y="0" width="2560" height="1409" />
     </state>
-    <state width="1586" height="279" key="GridCell.Tab.0.left/-2256.635.1504.972/0.0.2560.1409@0.0.2560.1409" timestamp="1607746294815" />
+    <state width="1586" height="279" key="GridCell.Tab.0.left/-2256.635.1504.972/0.0.2560.1409@0.0.2560.1409" timestamp="1607747305011" />
     <state width="1480" height="323" key="GridCell.Tab.0.left/0.0.2560.1409@0.0.2560.1409" timestamp="1605998433517" />
     <state width="1326" height="226" key="GridCell.Tab.0.left/786.2160.1504.972/0.0.2560.1409@0.0.2560.1409" timestamp="1606944907433" />
-    <state width="1586" height="279" key="GridCell.Tab.0.right" timestamp="1607746294815">
+    <state width="1586" height="279" key="GridCell.Tab.0.right" timestamp="1607747305011">
       <screen x="0" y="0" width="2560" height="1409" />
     </state>
-    <state width="1586" height="279" key="GridCell.Tab.0.right/-2256.635.1504.972/0.0.2560.1409@0.0.2560.1409" timestamp="1607746294815" />
+    <state width="1586" height="279" key="GridCell.Tab.0.right/-2256.635.1504.972/0.0.2560.1409@0.0.2560.1409" timestamp="1607747305011" />
     <state width="1480" height="323" key="GridCell.Tab.0.right/0.0.2560.1409@0.0.2560.1409" timestamp="1605998433517" />
     <state width="1326" height="226" key="GridCell.Tab.0.right/786.2160.1504.972/0.0.2560.1409@0.0.2560.1409" timestamp="1606944907433" />
     <state x="429" y="323" key="SettingsEditor" timestamp="1605998394115">

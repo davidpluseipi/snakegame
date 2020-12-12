@@ -5,7 +5,7 @@ import sys
 pygame.init()
 
 clock = pygame.time.Clock()
-fps = 5
+fps = 10
 game_over = False
 score, dx, dy = 0, 0, 0
 size = 10
@@ -16,7 +16,13 @@ x = window[0]/2
 y = window[1]/2
 
 screen = pygame.display.set_mode(window)
-# background = pygame.Surface(window)
+# bg = pygame.Surface(window)
+bg = pygame.image.load('bg.png')
+snake = pygame.image.load('white_square.png')
+snake_top = screen.get_height() - snake.get_height()
+snake_left = screen.get_width()/2 - snake.get_width()/2
+screen.blit(snake, (snake_left, snake_top))
+
 pygame.display.set_caption('Snake Game')
 
 
@@ -37,7 +43,7 @@ def draw_text(text, font_, text_col, x_, y_):
 
 def draw_the_snake(position):
     for j in position:
-        pygame.draw.rect(screen, light_grey, [j[0], j[1], size, size])
+        pygame.draw.rect(screen, red, [j[0], j[1], size, size])
 
 
 def move_fruit():
@@ -50,6 +56,9 @@ def move_fruit():
 (fruit_x, fruit_y) = move_fruit()
 
 while not game_over:
+    clock.tick(fps)
+    screen.blit(bg, (0, 0))
+    screen.blit(snake, (x - snake.get_width()/2, snake_top))
 
     for event in pygame.event.get():
 
@@ -77,42 +86,42 @@ while not game_over:
                 dy = -size
 
     # erase the screen
-    screen.fill(black)
+    # screen.fill(black)
 
     # update the head of the snake
     x += dx
     y += dy
-    head = [x, y]
-    snake_position.append(head)
+    # head = [x, y]
+    # snake_position.append(head)
 
     # update the tail
-    if len(snake_position) > tail:
-        del snake_position[0]
-
-    # update the fruit
-    if x == fruit_x and y == fruit_y:
-        (fruit_x, fruit_y) = move_fruit()
-        tail += 1
+    # if len(snake_position) > tail:
+    #     del snake_position[0]
+    #
+    # # update the fruit
+    # if x == fruit_x and y == fruit_y:
+    #     (fruit_x, fruit_y) = move_fruit()
+    #     tail += 1
 
     # screen.blit(background, (0, 0))  # draw background
     # draw snake
-    draw_the_snake(snake_position)
+    # draw_the_snake(snake_position)
 
     # draw fruit
-    pygame.draw.rect(screen, red, [fruit_x, fruit_y, size, size])
+    # pygame.draw.rect(screen, red, [fruit_x, fruit_y, size, size])
 
     # update the screen
     pygame.display.update()
 
-    # end the game if they hit the side
-    if x >= window[0] or x < 0 or y >= window[1] or y < 0:
-        game_over = True
+    # # end the game if they hit the side
+    # if x >= window[0] or x < 0 or y >= window[1] or y < 0:
+    #     game_over = True
+    #
+    # # end the game if they eat the tail
+    # for i in snake_position[:-1]:
+    #     if i == head:
+    #         game_over = True
 
-    # end the game if they eat the tail
-    for i in snake_position[:-1]:
-        if i == head:
-            game_over = True
 
-    clock.tick(fps)
 pygame.quit()
 sys.exit()
