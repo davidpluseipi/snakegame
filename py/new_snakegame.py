@@ -29,7 +29,7 @@ while not game_over:
     y += dy
     pygame.draw.rect(background, (200, 200, 200), (x, y, size, size))
     screen.blit(background, (0, 0))
-    pygame.display.flip()
+    pygame.display.update()
     clock.tick(v)
 pygame.quit()
 quit()
