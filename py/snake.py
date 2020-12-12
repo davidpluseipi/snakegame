@@ -78,13 +78,12 @@ def check_collisions():
     # end the game if they hit the side
     if x >= window[0] or x < 0 or y >= window[1] or y < 0:
         return True
-    else:
+
         # end the game if they eat the tail
-        for i in snake_position[:-1]:
-            if i == head:
-                return True
-            else:
-                return False
+    for i in snake_position[:-1]:
+        if i == head:
+            return True
+
 
 
 # place the first fruit
@@ -144,7 +143,7 @@ while not game_over:
             offset[1] = spacing
 
         # display a randomly selected word on fruit capture
-        selection = random.randrange(1, 4)
+        selection = random.randrange(0, 4)
         draw_text(words[selection], font, light_grey, (fruit_x + offset[0], fruit_y + offset[1]))
         pygame.display.update()
         time.sleep(0.2)
